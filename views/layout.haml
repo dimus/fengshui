@@ -13,7 +13,10 @@
         #leftTopPan
           %a{ :href => "index.html" }
             %img{ :title => "Cape Cod Feng Shui", :src => "images/logo.gif", :border => "0", :height => "73", :alt => "Cape Cod Feng Shui", :width => "200" }
+
         %ul
+          %li.ccsf_logo
+            %img{ :src => "/images/ccsf_logo.gif" }
           - [["Home","index.html"],["Memberships", "memberships.html"], ["Programs", "programs.html"], ["Seminars", "seminars.html"], ["About","about.html"], ["Tip of the Day", "http://www.wofs.com/components/com_custompages/tipoftheday.php"], ["KUA Calculator", "http://www.wofs.com/index.php?option=com_custompages&amp;Itemid=81"], ["Store", "http://storesense4.megawebservers.com/capecodfengshui_com/StoreFront.bok"],  ["Contact", "contact.html"]].each do |item|
             - klass = @current_page == item[0] ? "current" : nil
             - target = item[1].match(/http:/) ? "_blank" : nil
@@ -35,8 +38,8 @@
             %br
             Wealth, and Prosperity!
           = yield
-          %h4
-            Can Feng Shui work for me?
+          %h2
+            Will Feng Shui work for me?
           %p
             The easiest way to find out is to schedule a consultation with our
             == #{celeste}.
@@ -52,7 +55,8 @@
             css
         %ul.templateworld
           %li
-            Design By:
+            Design By:&nbsp;
           %li
             %a{ :href => "http://www.templateworld.com", :target => "_blank" }
-              Template World, Dmitry Mozzherin
+              Template World,&nbsp;
+          %li Dmitry Mozzherin
