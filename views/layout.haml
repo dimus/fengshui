@@ -1,7 +1,7 @@
 !!!
 %html{ :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
-    %meta{ :content => "text/html; charset=iso-8859-1", "http-equiv" => "Content-Type" }
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
     %meta{ :name => "description", :content => "Cape Cod Feng Shui website" }
     %meta{ :name => "keywords", :content => "CCFS Feng Shui" }
     %title
@@ -17,13 +17,12 @@
         %ul
           %li.ccsf_logo
             %img{ :src => "/images/ccsf_logo.gif" }
-          - [["Home","index.html"],["Memberships", "memberships.html"], ["Programs", "programs.html"], ["Seminars", "seminars.html"], ["About","about.html"], ["Tip of the Day", "http://www.wofs.com/components/com_custompages/tipoftheday.php"], ["KUA Calculator", "http://www.wofs.com/index.php?option=com_custompages&amp;Itemid=81"], ["Store", "http://storesense4.megawebservers.com/capecodfengshui_com/StoreFront.bok"],  ["Contact", "contact.html"]].each do |item|
+          - [["Home","index.html"],["Memberships", "memberships.html"], ["Programs", "programs.html"], ["Seminars", "seminars.html"], ["Business", "business.html"], ["About","about.html"], ["Tip of the Day", "http://www.wofs.com/components/com_custompages/tipoftheday.php"], ["KUA Calculator", "http://www.wofs.com/index.php?option=com_custompages&amp;Itemid=81"], ["Contact", "contact.html"]].each do |item|
             - klass = @current_page == item[0] ? "current" : nil
             - target = item[1].match(/http:/) ? "_blank" : nil
             %li{ :class => klass, :target => target }
               %a{ :href => item[1] }
                 = item[0]
-                = @current_page
       #rightPan
         %h1
           Professional
@@ -46,7 +45,7 @@
     #footermainPan
       #footerPan
         %p.copyright
-          © 2003-2010 Cape Cod Feng Shui
+          \&copy; 2003-2010 Cape Cod Feng Shui
         #footerPanhtml
           %a{ :href => "http://validator.w3.org/check?uri=referer", :target => "_blank" }
             html
