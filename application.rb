@@ -14,8 +14,13 @@ end
 
 helpers do
   def celeste
-    'Master Practitioner/Consultant, <a href="mailto:Celeste@capecodfengshui.com">Celeste</a>'
+    '<span class="boldtext">Master Practitioner/Consultant</span>, <a href="mailto:Celeste@capecodfengshui.com">Celeste</a>'
   end
+end
+
+def index
+  @current_page = "Home"
+  haml index
 end
 
 get '/ccfs.css' do
@@ -25,12 +30,13 @@ end
 
 # root page
 get '/' do
-  puts 'got here'
-  haml :index
+  @current_page = "Home"
+  index
 end
 
 get '/index.html' do
-  haml :index
+  @current_page = "Home"
+  index
 end
 
 get '/memberships.html' do

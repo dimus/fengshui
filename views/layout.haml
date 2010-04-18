@@ -12,135 +12,38 @@
       #leftPan
         #leftTopPan
           %a{ :href => "index.html" }
-            %img{ :title => "Cape Cod Feng Shui", :src => "images/logo.gif", :border => "0", :height => "39", :alt => "Cape Cod Feng Shui", :width => "160" }
+            %img{ :title => "Cape Cod Feng Shui", :src => "images/logo.gif", :border => "0", :height => "73", :alt => "Cape Cod Feng Shui", :width => "200" }
         %ul
-          %li.home
-            %a{ :href => "index.html" }
-              Home
-          %li
-            %a{ :href => "memberships.html" }
-              Memberships
-          %li
-            %a.active{ :href => "programs.html" }
-              Programs
-          %li
-            %a{ :href => "seminars.html" }
-              Seminars
-          %li
-            %a{ :href => "about.html" }
-              About
-          %li
-            %a{ :href => "http://www.wofs.com/components/com_custompages/tipoftheday.php", :target => "_blank" }
-              Tip of the Day
-          %li
-            %a{ :href => "http://www.wofs.com/index.php?option=com_custompages&amp;Itemid=81", :target => "_blank" }
-              KUA Calculator
-          %li
-            %a{ :href => "http://storesense4.megawebservers.com/capecodfengshui_com/StoreFront.bok", :target => "_blank" }
-              Store
-          %li
-            %a{ :href => "contact.html" }
-              Contact
-        %h2
-          services
-        %ul.linkone
-          %li
-            %a{ :href => "#" }
-              pit tellus, at
-          %li
-            %a{ :href => "#" }
-              iaculis ante
-          %li
-            %a{ :href => "#" }
-              ante eget
-          %li
-            %a{ :href => "#" }
-              massa. Vestibu
-          %li
-            %a{ :href => "#" }
-              lum facilisis.
-          %li
-            %a{ :href => "#" }
-              Quisque vel est.
-          %li
-            %a{ :href => "#" }
-              Donec ante
-          %li
-            %a{ :href => "#" }
-              velit, eleifend
-          %li
-            %a{ :href => "#" }
-              ucont cont,
-          %li
-            %a{ :href => "#" }
-              ucont cont,
-          %li
-            %a{ :href => "#" }
-              rhoncus
+          - [["Home","index.html"],["Memberships", "memberships.html"], ["Programs", "programs.html"], ["Seminars", "seminars.html"], ["About","about.html"], ["Tip of the Day", "http://www.wofs.com/components/com_custompages/tipoftheday.php"], ["KUA Calculator", "http://www.wofs.com/index.php?option=com_custompages&amp;Itemid=81"], ["Store", "http://storesense4.megawebservers.com/capecodfengshui_com/StoreFront.bok"],  ["Contact", "contact.html"]].each do |item|
+            - klass = @current_page == item[0] ? "current" : nil
+            - target = item[1].match(/http:/) ? "_blank" : nil
+            %li{ :class => klass, :target => target }
+              %a{ :href => item[1] }
+                = item[0]
+                = @current_page
       #rightPan
         %h1
-          A new begining
+          Professional
+          %br
+          == #{"&nbsp;" * 4}Feng Shui 
+          %br
+          == #{"&nbsp;" * 8}Consultations
+          %br
           %br
           %span
-            senectus et netus et
+            Wishing You Health, 
             %br
-            malesuada
-        %h2
-          About G-Consultant
-        %p
-          %span.boldtext
-            G-Consultant is a free, tableless, W3C-compliant web design layout by Template World.
-          This template has been tested and proven compatible with all major browser environments and operating systems. You are free to modify the design to suit your tastes in any way you like.
-        %p
-          We only ask you to not remove
-          %span.magedacolortext
-            "Design by Template World"
-          and the link http://www.templateworld.com from the footer of the template.
-        %p.bottompadding
-          If you are interested in seeing more of our free web template designs feel free to visit our website, Template World. We intend to add at least 25 new free templates in the coming month.
-        #rightmorePan
-          %p.textposition
-            culis ante  faucibus enim.
-          %a{ :href => "#" }
-            more
-        #rightaddPan
-          #rightaddonePan
-            %p.whitetext
-              g-consultant
-            %p.whitetextbig
-              new launch
-            %a{ :href => "#" }
-              view
-          #rightaddtwoPan
-            %p.whitetext
-              g-consultant
-            %p.whitetextbig
-              solutions
-            %a{ :href => "#" }
-              view
-        %h4
-          g-consultant updates
-          %br
-          %span
-            24rth august 2006
-        %p
-          %span.boldtext
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. DonecSed fringilla ligula dolor, eleifend cursus,
-          tincidunt id, tempus id, elitau auguearcu. Nulla pede sapien, varius vitae,
-        %p.bottompadding
-          Praesent quis ipsum. Ut dui tellus, dapibus vitae,vehicula vitae,aculis ante  congue vel, risus.
-          %span.magedacolortext
-            Aenean a pede.
-          Sed fringilla, quam ut facilisis consequat, elit augue suscipit tellus, at iaculis ante ante eget massa. Vestibulum facilisis. Quisque vel est. Donec ante velit,eleifend ucont cont, euismod et, rhoncus eget,sapien. Integer condimentum nunca culis ante  faucibus enim. Pellentesque habitant
-        #rightmorenextPan
-          %p.textposition
-            culis ante  faucibus enim.
-          %a{ :href => "#" }
-            more
+            Wealth, and Prosperity!
+          = yield
+          %h4
+            Can Feng Shui work for me?
+          %p
+            The easiest way to find out is to schedule a consultation with our
+            == #{celeste}.
     #footermainPan
       #footerPan
         %p.copyright
-          ©Cape Cod Feng Shui
+          © 2003-2010 Cape Cod Feng Shui
         #footerPanhtml
           %a{ :href => "http://validator.w3.org/check?uri=referer", :target => "_blank" }
             html
@@ -152,4 +55,4 @@
             Design By:
           %li
             %a{ :href => "http://www.templateworld.com", :target => "_blank" }
-              Template World
+              Template World, Dmitry Mozzherin
