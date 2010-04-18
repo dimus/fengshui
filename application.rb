@@ -13,10 +13,41 @@ error do
 end
 
 helpers do
-  # add your helpers here
+  def celeste
+    'Master Practitioner/Consultant, <a href="mailto:Celeste@capecodfengshui.com">Celeste</a>'
+  end
+end
+
+get '/ccfs.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass :ccfs
 end
 
 # root page
 get '/' do
-  haml :root
+  haml :index
+end
+
+get '/index.html' do
+  haml :index
+end
+
+get '/memberships.html' do
+  haml :memberships
+end
+
+get '/programs.html' do
+  haml :programs
+end
+
+get '/seminars.html' do
+  haml :seminars
+end
+
+get '/about.html' do
+  haml :about
+end
+
+get '/contact.html' do
+  haml :contact
 end
