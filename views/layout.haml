@@ -37,11 +37,12 @@
             %br
             Wealth, and Prosperity!
           = yield
-          %h2
-            Will Feng Shui work for me?
-          %p
-            The easiest way to find out is to schedule a consultation with our
-            == #{celeste}.
+          - if @current_page != "Contact"
+            %h2
+              Will Feng Shui work for me?
+            %p
+              The easiest way to find out is to schedule a consultation with our
+              == #{celeste}.
     #footermainPan
       #footerPan
         %p.copyright
