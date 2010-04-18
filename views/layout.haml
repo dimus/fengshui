@@ -12,16 +12,16 @@
       #leftPan
         #leftTopPan
           %a{ :href => "index.html" }
-            %img{ :title => "Cape Cod Feng Shui", :src => "images/logo.gif", :border => "0", :height => "73", :alt => "Cape Cod Feng Shui", :width => "200" }
+            %img{ :title => "Cape Cod Feng Shui", :src => "images/logo.gif", :border => "0", :height => "73", :alt => "Cape Cod Feng Shui", :width => "200" }/
 
         %ul
           %li.ccsf_logo
-            %img{ :src => "/images/ccsf_logo.gif" }
+            %img{ :src => "/images/ccsf_logo.gif", :alt => "Cape Cod Feng Shui Logo" }/
           - [["Home","index.html"],["Memberships", "memberships.html"], ["Programs", "programs.html"], ["Seminars", "seminars.html"], ["Business", "business.html"], ["About","about.html"], ["Tip of the Day", "http://www.wofs.com/components/com_custompages/tipoftheday.php"], ["KUA Calculator", "http://www.wofs.com/index.php?option=com_custompages&amp;Itemid=81"], ["Contact", "contact.html"]].each do |item|
             - klass = @current_page == item[0] ? "current" : nil
             - target = item[1].match(/http:/) ? "_blank" : nil
-            %li{ :class => klass, :target => target }
-              %a{ :href => item[1] }
+            %li{ :class => klass }
+              %a{ :href => item[1], :target => target }
                 = item[0]
       #rightPan
         %h1
@@ -36,13 +36,13 @@
             Wishing You Health, 
             %br
             Wealth, and Prosperity!
-          = yield
-          - if @current_page != "Contact"
-            %h2
-              Will Feng Shui work for me?
-            %p
-              The easiest way to find out is to schedule a consultation with our
-              == #{celeste}.
+        = yield
+        - if @current_page != "Contact"
+          %h2
+            Will Feng Shui work for me?
+          %p
+            The easiest way to find out is to schedule a consultation with our
+            == #{celeste}.
     #footermainPan
       #footerPan
         %p.copyright
