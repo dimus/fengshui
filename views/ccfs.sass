@@ -1,38 +1,476 @@
 body
-  margin: 0 0 0 0
-  padding: 0 0 0 0
+  margin: 0px
+  padding: 0px
+  background: url(images/mainbg.gif) 0 0 repeat-x #F6F4E4
+  color: #6B6854
+  font: 14px/18px "Trebuchet MS", Arial, Helvetica, sans-serif
 
 
-#container
-  width: 950px
-  margin: auto
-  padding: 0 0 100px 0
-  padding-left: 100px
-  padding-right: 100px
-  background-image: url(/images/rounded.gif)
-  background-repeat: no-repeat
-  background-position: bottom
-  border: 1px dotted #999
+div, p, ul, h1, h2, h4, img, form, label
+  padding: 0px
+  margin: 0px
+
+
+ul
+  list-style-type: none
+
+
+#mainPan
+  width: 691px
   position: relative
+  margin: 0 auto
+  padding: 0px
 
-#header
-  background: transparent url(/images/header.jpg) no-repeat center top
-  border: 1px dotted #999999
-  width: 950px
-  height: 387px
 
-h3
-  background
-    image:
-
-#sidebar
+#leftPan
+  width: 240px
   float: left
-  width: 10em
 
-#menu
-  a
+
+#leftTopPan
+  width: 240px
+  height: 125px
+  position: relative
+  margin: 0 auto
+  padding: 0
+  background: url(images/left-top.jpg) 0 0 no-repeat
+
+  img
+    width: 160px
+    height: 39px
+    margin: 30px 0 0 37px
+
+
+#leftPan
+  ul
+    width: 240px
+    height: 231px
     display: block
+    background: url(images/menu-bg.jpg) 0 0 no-repeat
+    padding: 28px 0 0
+
+    li
+      width: 118px
+      height: 27px
+      position: relative
+      margin: 0 auto
+      background: url(images/dot.gif) 0 100% repeat-x
+
+      a
+        width: 96px
+        height: 26px
+        display: block
+        background: url(images/arrow-normal.gif) 0 50% no-repeat #F6F4E4
+        color: #8F8C73
+        font: 13px/26px "Trebuchet MS", Arial, Helvetica, sans-serif
+        font-weight: bold
+        padding: 0 0 0 22px
+        text-decoration: none
+
+        &:hover
+          background: url(images/arrow-normal.gif) 0 50% no-repeat #F6F4E4
+          color: #7F0A5F
+          text-decoration: none
+
+      &.home
+        a
+          width: 96px
+          height: 27px
+          display: block
+          background: url(images/homebg.gif) 0 0 no-repeat #F6F4E4
+          color: #7F0A5F
+          font: 13px/26px "Trebuchet MS", Arial, Helvetica, sans-serif
+          font-weight: bold
+          text-decoration: none
+          padding: 0 0 0 22px
+
+        &.contact
+          background: none
+
+    &.linkone
+      width: 240px
+      height: 259px
+      padding: 0
+      background: none
+
+      li
+        width: 118px
+        height: 26px
+        position: relative
+        margin: 0 auto
+        background: none
+        padding: 0px
+
+        a
+          width: 96px
+          height: 26px
+          display: block
+          background: url(images/arrow-normal.gif) 0 50% no-repeat #F6F4E4
+          color: #8F8C73
+          font: 13px/26px "Trebuchet MS", Arial, Helvetica, sans-serif
+          font-weight: normal
+          padding: 0 0 0 22px
+          text-decoration: underline
+
+          &:hover
+            background: url(images/arrow-normal.gif) 0 50% no-repeat #F6F4E4
+            color: #25241E
+            text-decoration: underline
+
+  h2
+    width: 90px
+    height: 63px
+    background: #F6F4E4
+    color: #8F146E
+    font-size: 24px
+    line-height: 63px
+    padding: 0 0 0 63px
+    font-weight: normal
+
+  form
+    width: 222px
+    height: 173px
+    position: relative
+    margin: 0 auto
+    background: url(images/formbg.gif) 0 0 no-repeat #ABA894
+    color: #fff
+
+    input
+      width: 143px
+      height: 17px
+      margin: 3px 0 2px 35px
+
+    label
+      width: 143px
+      height: 18px
+      margin: 2px 0 0 35px
+      font: 12px/15px Arial, Helvetica, sans-serif
+      font-weight: bold
+
+    input.button
+      width: 51px
+      height: 17px
+      float: left
+      background: url(images/button.gif) 0 0 no-repeat #FEFEFE
+      color: #fff
+      font-size: 12px
+      font-weight: bold
+      line-height: 18px
+      border: none
+      padding: 0 10px 0 0
+      margin: 3px 10px 2px 28px
+
+    h2
+      width: 150px
+      height: 47px
+      display: block
+      background: url(images/memberbg.gif) 0 0 no-repeat #D5D2BC
+      color: #fff
+      font-size: 18px
+      line-height: 47px
+      padding: 0 0 0 65px
+
+    #register
+      width: 100px
+      height: 24px
+      float: left
+      margin: 3px 0 0
+
+      a
+        display: block
+        background: url(images/arrow4.gif) 100% 50% no-repeat #ABA894
+        color: #fff
+        font-size: 14px
+        padding: 0 5px 0 0
+        text-decoration: none
+
+        &:hover
+          text-decoration: underline
+
+
+#rightPan
+  width: 451px
+  float: left
+
+  h1
+    width: 438px
+    height: 124px
+    background: url(images/header.jpg) 0 0 no-repeat #D33F9F
+    color: #fff
+    font: 20px/13px Georgia, "Times New Roman", Times, serif
+    padding: 37px 0 0 13px
+
+    span
+      font: 13px/16px "Trebuchet MS", Arial, Helvetica, sans-serif
+
+  h2
+    width: 240px
+    height: 36px
+    display: block
+    background: url(images/icon1.jpg) 0 0 no-repeat #F6F4E4
+    color: #8F146E
+    font-size: 24px
+    line-height: 36px
+    padding: 0 0 0 65px
+    margin: 29px 0 0 9px
+
+  h4
+    width: 240px
+    height: 50px
+    display: block
+    background: url(images/icon2.jpg) 0 0 no-repeat #F6F4E4
+    color: #8F146E
+    font-size: 24px
+    line-height: 22px
+    padding: 0 0 0 75px
+    margin: 0 0 0 9px
+    clear: both
+
+    span
+      color: #9F9D81
+      background: #F6F4E4
+      font-size: 16px
+      font-weight: bold
+      line-height: 18px
+
+  p
+    padding: 20px 0 0 9px
+
+    &.bottompadding
+      padding: 22px 0 0 9px
+      margin: 0 0 38px 0
+
+    span
+      &.boldtext
+        font-weight: bold
+
+      &.magedacolortext
+        background: #F6F4E4
+        color: #8F146E
+
+
+#rightmorePan, #rightmorenextPan
+  width: 420px
+  height: 28px
+  display: block
+  background: url(images/pattern.gif) 0 0 repeat
+  border: 1px solid #fff
+  line-height: 28px
+  padding: 0 0 0 20px
+  margin: 0 0 0 9px
+
+  p.textposition
+    float: left
+    padding: 0 0 0 18px
+    margin: 0px
+
+  a
+    float: left
+    width: 36px
+    height: 28px
+    display: block
+    background: url(images/morebg.gif) 0 0 no-repeat #D5D2BC
+    color: #1F1E15
     text-decoration: none
-    color: black
-  a:hover
-    text-decoration: underline
+    padding: 0 15px 0 45px
+    margin: 0 0 0 135px
+
+    &:hover
+      text-decoration: underline
+
+
+#rightaddPan
+  width: 442px
+  height: 170px
+  position: relative
+  margin: 0 auto
+  padding: 50px 0 0 9px
+
+
+#rightaddonePan
+  width: 218px
+  height: 110px
+  float: left
+  background: url(images/image1.jpg) 100% 0 no-repeat #CBC8B2
+  color: #fff
+
+  p
+    &.whitetext
+      font-size: 22px
+      padding: 16px 0 0 16px
+
+    &.whitetextbig
+      font-size: 28px
+      padding: 10px 0 0 16px
+
+  a
+    width: 97px
+    height: 33px
+    display: block
+    background: url(images/viewmore.jpg) 0 0 no-repeat #ABA894
+    color: #fff
+    font-size: 16px
+    line-height: 30px
+    text-decoration: none
+    margin: 15px 0 0
+    padding: 0 0 0 55px
+
+    &:hover
+      text-decoration: underline
+
+
+#rightaddtwoPan
+  width: 218px
+  height: 110px
+  float: left
+  background: url(images/image2.jpg) 100% 0 no-repeat #CBC8B2
+  color: #fff
+  margin: 0 0 0 6px
+
+  p
+    &.whitetext
+      font-size: 22px
+      padding: 16px 0 0 16px
+
+    &.whitetextbig
+      font-size: 28px
+      padding: 10px 0 0 16px
+
+  a
+    width: 82px
+    height: 33px
+    display: block
+    background: url(images/viewmore.jpg) 0 0 no-repeat #ABA894
+    color: #fff
+    font-size: 16px
+    line-height: 30px
+    text-decoration: none
+    margin: 15px 0 0
+    padding: 0 0 0 55px
+
+    &:hover
+      text-decoration: underline
+
+
+#footermainPan
+  background: url(images/footerbg.gif) 0 0 repeat-x #6B6854
+  color: #fff
+  position: relative
+  margin: 0 auto
+  height: 227px
+  clear: both
+
+
+#footerPan
+  width: 691px
+  position: relative
+  margin: 0 auto
+  font: 12px/15px "Trebuchet MS",Arial, Helvetica, sans-serif
+  font-weight: normal
+
+  ul
+    width: 546px
+    position: absolute
+    top: 85px
+    left: 42px
+
+  li
+    float: left
+
+  ul
+    li a
+      padding: 0 10px 0
+      color: #fff
+      background: #6B6854
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+    &.templateworld
+      width: 190px
+      background: #6B6854
+      color: #fff
+      display: block
+      position: absolute
+      top: 160px
+      left: 240px
+
+      li
+        height: 20px
+
+        a
+          background: #6B6854
+          display: block
+          color: #fff
+          text-decoration: none
+          padding: 0px
+
+          &:hover
+            text-decoration: underline
+
+  p.copyright
+    width: 204px
+    background: #6B6854
+    color: #F3F1DF
+    position: absolute
+    top: 105px
+    left: 218px
+
+
+#footerPanhtml
+  width: 64px
+  height: 19px
+  display: block
+  position: absolute
+  top: 132px
+  left: 240px
+
+  a
+    width: 59px
+    height: 18px
+    background: url(images/arrow2.gif) no-repeat 45px 0px #D0CEB8
+    display: block
+    position: absolute
+    top: 0px
+    left: 0px
+    line-height: 19px
+    padding: 1px 0 0 5px
+    border: 1px solid #FFFFFA
+    color: #353427
+    text-transform: uppercase
+    text-decoration: none
+
+    &:hover
+      background: url(images/arrow3.gif) no-repeat 45px 0px #B0AD93
+      color: #353427
+      text-decoration: none
+
+
+#footerPancss
+  width: 64px
+  height: 19px
+  display: block
+  position: absolute
+  top: 132px
+  left: 320px
+
+  a
+    width: 49px
+    height: 18px
+    background: url(images/arrow3.gif) no-repeat 45px 0px #D0CEB8
+    display: block
+    position: absolute
+    top: 0px
+    left: 0px
+    line-height: 19px
+    padding: 1px 0 0 15px
+    border: 1px solid #FFFFFA
+    color: #353427
+    text-transform: uppercase
+    text-decoration: none
+
+    &:hover
+      background: url(images/arrow2.gif) no-repeat 45px 0px #B0AD93
+      color: #353427
+      text-decoration: none

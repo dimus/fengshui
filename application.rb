@@ -25,6 +25,7 @@ end
 
 # root page
 get '/' do
+  puts 'got here'
   haml :index
 end
 
